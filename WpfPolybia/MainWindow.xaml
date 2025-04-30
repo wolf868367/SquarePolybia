@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfPolybia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPolybia"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-15,0,0">
+            <GroupBox Header="Выбор языка">
+                <StackPanel>
+                    <RadioButton x:Name="rbEng" Content="Английский" Margin="0,0,0,5" IsChecked="True"/>
+                    <RadioButton x:Name="rbRu" Content="Русский" Margin="0,0,0,5"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Выбор действие">
+                <StackPanel>
+                    <RadioButton x:Name="rbEncrypt" Content="Шифрование" Margin="0,0,0,5" IsChecked="True"/>
+                    <RadioButton x:Name="rbDecrypt" Content="Расшифрование" Margin="0,0,0,5"/>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,25">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Текст" Padding="5"/>
+                    <TextBox x:Name="tbEncryptor" Width="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label x:Name="lbEncryptor"/>
+                </StackPanel>
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Кодировать" BorderBrush="{x:Null}" Foreground="White" Background="#FF2DB91A" Click="Button_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
