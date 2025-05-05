@@ -32,8 +32,8 @@ namespace WpfPolybia
             }
            if (rbEng.IsChecked == true)
            {
-                if (rbEncrypt.IsChecked == true) lbEncryptor.Content = ps.Encrypt(tbEncryptor.Text);
-                if (rbDecrypt.IsChecked == true) lbEncryptor.Content = ps.Decrypt(tbEncryptor.Text);
+                if (rbEncrypt.IsChecked == true) lbEncryptor.Content ="Результат: " + ps.Encrypt(tbEncryptor.Text);
+                if (rbDecrypt.IsChecked == true) lbEncryptor.Content ="Результат: " + ps.Decrypt(tbEncryptor.Text);
             }
         }
     }

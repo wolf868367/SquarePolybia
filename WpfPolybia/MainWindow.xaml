@@ -6,29 +6,45 @@
         xmlns:local="clr-namespace:WpfPolybia"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-15,0,0">
-            <GroupBox Header="Выбор языка">
-                <StackPanel>
-                    <RadioButton x:Name="rbEng" Content="Английский" Margin="0,0,0,5" IsChecked="True"/>
-                    <RadioButton x:Name="rbRu" Content="Русский" Margin="0,0,0,5"/>
+    <Grid Background="#FF868686">
+        <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-15,0,0" Background="White"  Width="250">
+
+            <StackPanel HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <Image Source="/Resources/1.png" Width="50" />
+                    <TextBlock HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0">
+                        Квадрат Полибия
+                        <LineBreak/>
+                        Шифрование текста
+                    </TextBlock>
                 </StackPanel>
-            </GroupBox>
-            <GroupBox Header="Выбор действие">
-                <StackPanel>
-                    <RadioButton x:Name="rbEncrypt" Content="Шифрование" Margin="0,0,0,5" IsChecked="True"/>
-                    <RadioButton x:Name="rbDecrypt" Content="Расшифрование" Margin="0,0,0,5"/>
-                </StackPanel>
-            </GroupBox>
-            <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,25">
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <GroupBox Header="Выбор языка">
+                    <StackPanel>
+                        <RadioButton x:Name="rbEng" Content="Английский" Margin="0,0,0,5" IsChecked="True"/>
+                        <RadioButton x:Name="rbRu" Content="Русский" Margin="0,0,0,5"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Выбор действия">
+                    <StackPanel>
+                        <RadioButton x:Name="rbEncrypt" Content="Шифровать" Margin="0,0,0,5" IsChecked="True"/>
+                        <RadioButton x:Name="rbDecrypt" Content="Дешифровать" Margin="0,0,0,5"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+            </StackPanel>
+            <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,10">
+                <Label Content="Введите текст:" HorizontalAlignment="Left" />
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Текст" Padding="5"/>
-                    <TextBox x:Name="tbEncryptor" Width="100"/>
+                    <TextBox x:Name="tbEncryptor" Width="100" VerticalContentAlignment="Center" Margin="0,0,10,0"/>
+                    <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Выполнить" BorderBrush="{x:Null}" Foreground="White" Background="#FF2DB91A" Click="Button_Click"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="lbEncryptor"/>
+                    <Label x:Name="lbEncryptor" Content="Результат:"/>
                 </StackPanel>
-                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Кодировать" BorderBrush="{x:Null}" Foreground="White" Background="#FF2DB91A" Click="Button_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

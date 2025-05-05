@@ -71,12 +71,11 @@ namespace SquarePolubiaLib.Tests
             PolybiusSquare ps = new PolybiusSquare();
             bool result = false;
             string text = "9999";
-            string expected = "";
             try
             {
                 string actual = ps.Decrypt(text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                  result = true;
             }
